@@ -20,9 +20,6 @@ import org.springframework.core.env.Environment;
 
 public class PropertyConfig {
 
-    @Autowired
-    Environment environment;
-
     @Value("${guru.username}")
     String user;
 
@@ -46,8 +43,7 @@ public class PropertyConfig {
         FakeDataSource fakeDataSource = new FakeDataSource();
         fakeDataSource.setUrl(url);
         fakeDataSource.setPassword(password);
-        String username = environment.getProperty("USERNAME");
-        fakeDataSource.setUser(username);
+        fakeDataSource.setUser(user);
         return fakeDataSource;
     }
 
@@ -58,12 +54,5 @@ public class PropertyConfig {
         fakeJmsBroker.setJmsPassword(jmsPassword);
         fakeJmsBroker.setJmsUrl(jmsUrl);
         return fakeJmsBroker;
-
-    }
-
-    @Bean
-    public static PropertySourcesPlaceholderConfigurer properties() {
-        PropertySourcesPlaceholderConfigurer configurer = new PropertySourcesPlaceholderConfigurer();
-        return configurer;
     }
 }
