@@ -1,0 +1,40 @@
+# Comment
+
+name:  Daniel
+
+names:
+  - John
+  - Paul
+  - Ringo
+
+pound_sign:  "#"
+
+book:
+    author:  Joe Buck
+    publisher:  Random House
+
+truth:  yes
+
+more_true:  true
+
+another_true:  True
+
+false:  no #No, false, FALSE
+
+string_val:  "This is it's quote"
+
+colon_string:  "my courses: one two three"
+
+include_new_lines:  |
+  asf asdfasdf  sdfasdfsdf
+  wer435435 5454654547567
+  dd
+  342432
+
+ignore_new_lines:  >
+  this is
+  just on
+  e long string
+
+
+

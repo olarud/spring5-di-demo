@@ -1,0 +1,12 @@
+guru:
+  jms:
+    username: JMS Username
+    password: sompass
+    url: someUrl
+
+---
+spring:
+  profiles: de
+guru:
+  jms:
+    url: Websetie
